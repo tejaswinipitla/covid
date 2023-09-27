@@ -129,10 +129,10 @@ app.get("/states/:stateId/stats/", async (request, response) => {
   const { stateId } = request.params;
   const getTotalQuery = `
     SELECT
-      SUM(cases) as TotalCases,
-      SUM(cured) as TotalCured,
-      SUM(active) as TotalActive,
-      SUM(deaths) as TotalDeaths
+      SUM(cases) as totalCases,
+      SUM(cured) as totalCured,
+      SUM(active) as totalActive,
+      SUM(deaths) as totalDeaths
     FROM 
       district
     WHERE 
